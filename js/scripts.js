@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
 	$thumbnail = $('.gallery__image');
 	$modal = $('.modal');
@@ -7,7 +7,7 @@ $(document).ready(function() {
 	$next_button = $('.next-button');
 	$prev_button = $('.prev-button');
 
-	$thumbnail.click(function() {
+	$thumbnail.click(function () {
 
 		$current_img = $(this);
 		img_src = $(this).attr('src');
@@ -17,9 +17,21 @@ $(document).ready(function() {
 
 	});
 
-	$modal_close.click(function() {
+	$modal_close.click(function () {
 		$modal.removeClass('modal--open');
 		$modal_image.attr('src', '');
 	});
+
+	var $grid = $('.gallery').isotope({
+
+	});
+
+	$('.container--small').on('click', 'button', function () {
+		var filterValue = $(this).attr('data-filter');
+		$grid.isotope({ filter: filterValue });
+		$('.active').removeClass('active');
+		$(this).addClass('active');
+	});
+
 
 });

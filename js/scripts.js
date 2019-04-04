@@ -6,6 +6,7 @@ $(document).ready(function() {
 	$modal_close = $('.modal-close');
 	$next_button = $('.next-button');
 	$prev_button = $('.prev-button');
+	$button =$('.filter-button');
 
 	$thumbnail.click(function() {
 
@@ -22,4 +23,18 @@ $(document).ready(function() {
 		$modal_image.attr('src', '');
 	});
 
+
+// init Isotope
+var $gallery = $('.gallery').isotope({
+	// options
+  });
+  // filter items on button click
+  $('.container').on( 'click', 'button', function() {
+	var filterValue = $(this).attr('data-filter');
+	$gallery.isotope({ filter: filterValue });
+
+	$button.removeClass('active');
+	$(this).addClass('active');
+  });
+	  
 });

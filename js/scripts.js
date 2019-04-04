@@ -22,4 +22,36 @@ $(document).ready(function() {
 		$modal_image.attr('src', '');
 	});
 
+
+
+	$('.gallery').masonry({
+  // options
+  itemSelector: '.gallery__item'
+});
+
+var $grid = $('.gallery').isotope({
+  // options
+});
+// filter items on button click
+$('.filter-button-group').on( 'click', 'button', function() {
+  var filterValue = $(this).attr('data-filter');
+  $grid.isotope({ filter: filterValue });
+
+$('.active').removeClass('active');
+$(this).addClass('active');
+});
+
+// $('.filter-button-group').on( 'click', 'button', function() {
+//   var filterValue = $(this).attr('data-filter');
+//   $gallery.isotope({ filter: '.canyons' });
+// });
+
+
+// $gallery.isotope({filter: '.caves'});
+// $gallery.isotope({filter: '.canyons'});
+// $gallery.isotope({filter: '.mountains'});
+// $gallery.isotope({filter: '.waterfalls'});
+// $gallery.isotope({filter: '.forests'});
+// $gallery.isotope({ filter: '*' });
+
 });

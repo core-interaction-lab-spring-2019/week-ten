@@ -22,4 +22,8 @@ $(document).ready(function() {
 		$modal_image.attr('src', '');
 	});
 
+	$('.gallery').masonry({
+		itemSelector: '.gallery__item'
+	});
+
 });

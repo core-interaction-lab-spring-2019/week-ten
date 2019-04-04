@@ -22,4 +22,21 @@ $(document).ready(function() {
 		$modal_image.attr('src', '');
 	});
 
+	$('.gallery').masonry({
+		// options
+		itemSelector: '.gallery__item'
+	  });
+
+		// init Isotope
+	var $grid = $('.gallery').isotope({
+		// options
+	});
+	// filter items on button click
+	$('.container--small').on( 'click', 'button', function() {
+		var filterValue = $(this).attr('data-filter');
+		$grid.isotope({ filter: filterValue });
+		$('.active').removeClass('active');
+		$(this).addClass('active');
+	});
+
 });

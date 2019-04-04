@@ -22,4 +22,13 @@ $(document).ready(function() {
 		$modal_image.attr('src', '');
 	});
 
+	var $gallery= $('.gallery').isotope({
+		// options
+	  });
+	  // filter items on button click
+	  $('.container--small').on( 'click', 'button', function() {
+		var filterValue = $(this).attr('data-filter');
+		$gallery.isotope({ filter: filterValue });
+	  });
+
 });

@@ -6,6 +6,7 @@ $(document).ready(function() {
 	$modal_close = $('.modal-close');
 	$next_button = $('.next-button');
 	$prev_button = $('.prev-button');
+	
 
 	$thumbnail.click(function() {
 
@@ -16,10 +17,30 @@ $(document).ready(function() {
 		$modal.addClass('modal--open');
 
 	});
-
+	
 	$modal_close.click(function() {
 		$modal.removeClass('modal--open');
 		$modal_image.attr('src', '');
 	});
 
+
+	$('.gallery').masonry({
+		// options
+		itemSelector: '.gallery__item'
+	  });
+
+	  // init Isotope
+var $grid = $('.gallery').isotope({
+	// options
+  });
+  // filter items on button click
+  $('.container').on( 'click', 'button', function() {
+	var filterValue = $(this).attr('data-filter');
+	$grid.isotope({ filter: filterValue });
+	$('.active').removeClass ('active');
+	$(this).addClass('active');
+  });
+
+
+	
 });

@@ -14,7 +14,6 @@ $(document).ready(function() {
 
 		$modal_image.attr('src', img_src);
 		$modal.addClass('modal--open');
-
 	});
 
 	$modal_close.click(function() {

@@ -22,4 +22,17 @@ $(document).ready(function() {
 		$modal_image.attr('src', '');
 	});
 
-});
+	$('.gallery').masonry({
+		itemSelector: '.gallery__item'
+	})
+
+	var $grid = $('.gallery').isotope({
+	});
+
+	$('.container').on( 'click', 'button', function() {
+		var filterValue = $(this).attr('data-filter');
+		$grid.isotope({ filter: filterValue });
+		$('.active').removeClass ('active');
+		$(this).addClass('active');
+	});
+	});

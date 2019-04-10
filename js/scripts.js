@@ -22,4 +22,23 @@ $(document).ready(function() {
 		$modal_image.attr('src', '');
 	});
 
+	// init Isotope
+	var $grid = $('.gallery').isotope({
+	  // options
+	});
+	// filter items on button click
+	$('.container').on( 'click', 'button', function() {
+
+		//layout and filtering
+	  var filterValue = $(this).attr('data-filter');
+	  $grid.isotope({ filter: filterValue });
+
+		//remove the active class from the buttons
+		$('.active').removeClass('active');
+
+		//add the active class to the button that was clicked
+		$(this).addClass('active');
+	});
+
+
 });

@@ -1,7 +1,39 @@
+.first-page-title {
+	display: inline-block;
+	font-size: 20em;
+	font-family: var(--title-font);
+	line-height: 250px;
+	color: var(--fifth-color);
+	text-decoration: none;
+	position: relative;
+
+	a {
+		text-decoration: none;
+		color: var(--fifth-color);
+	}
+
+	a:hover{
+		text-decoration: none;
+		color: var(--secondary-color);
+	}
+
+	&:before {
+		position: absolute;
+		left: 0;
+		bottom: 3px;
+		height: 18px;
+		width: 100%;
+		background-color: var(--tertiary-color);
+		content: '';
+		z-index: -1;
+	}
+}
+
 .page-title {
 	display: inline-block;
-	font-size: 6.8em;
-	font-family: var(--copy-font);
+	font-size: 9em;
+	font-family: var(--title-font);
+	color: var(--fifth-color);
 	position: relative;
 
 	&:before {

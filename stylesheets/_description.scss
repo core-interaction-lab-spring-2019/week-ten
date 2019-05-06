@@ -1,4 +1,73 @@
 .description {
-	font-size: 3.2em;
+	font-size: 1.8em;
 	font-family: var(--copy-font);
+	color: var(--forth-color);
+}
+
+.titledescription {
+	font-size: 8em;
+	font-family: var(--title-font);
+	color: var(--secondary-color);
+	padding: 50px 0 0 190px;
+}
+
+.historydescription {
+	font-size: 1.5em;
+	line-height: 1.2em;
+	font-family: var(--title-font-thin);
+	color: var(--forth-color);
+	padding: 0 0 20px 0;
+}
+
+.confessionsnumber {
+	font-size: 6em;
+	font-family: var(--title-font);
+	color: var(--fifth-color);
+	padding: 0 0 20px 0;
+}
+
+.confessionsdescription {
+	font-size: 3em;
+	line-height: 1.8em;
+	font-family: var(--title-font-thin);
+	color: var(--forth-color);
+	padding: 0 0 20px 0;
+}
+
+.cluesdescription {
+	font-size: 1.5em;
+	line-height: 1.2em;
+	font-family: var(--title-font-thin);
+	color: var(--forth-color);
+	padding: 0 0 20px 0;
+}
+
+.termstitle {
+	font-size: 2em;
+	font-family: var(--title-font);
+	color: var(--fifth-color);
+	padding: 0 0 20px 0;
+}
+
+.termssmall {
+	font-size: 1.5em;
+	line-height: 1.2em;
+	font-family: var(--copy-font);
+	color: var(--secondary-color);
+	padding: 0 0 20px 0;
+}
+
+.termsdescription {
+	font-size: 1.5em;
+	line-height: 1.2em;
+	font-family: var(--title-font-thin);
+	color: var(--forth-color);
+	padding: 0 0 20px 0;
+}
+
+.name {
+	font-size: 1.8em;
+	font-family: var(--copy-font);
+	color: var(--fifth-color);
+	padding: 50px;
 }

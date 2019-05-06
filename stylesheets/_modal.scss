@@ -1,13 +1,13 @@
 .modal {
 	opacity: 0;
 	pointer-events: none;
-	background-color: var(--transparent-white);
+	background-color: var(--white);
 	position: fixed;
 	height: 100vh;
 	width: 100vw;
 	top: 0;
 	left: 0;
-	transition: opacity .2s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
 
 	&--open {
 		opacity: 1;
@@ -17,7 +17,7 @@
 	&__image {
 		position: absolute;
 		width: calc(100% - 80px);
-		max-width: 900px;
+		max-width: 1280px;
 		height: auto;
 		transform: translate(-50%, -50%);
 		top: 50%;
@@ -29,8 +29,8 @@
 	position: absolute;
 	height: 30px;
 	width: 30px;
-	top: 20px;
-	right: 20px;
+	top: 10px;
+	right: 10px;
 	cursor: pointer;
 
 	&:before,
@@ -41,8 +41,8 @@
 		right: 15px;
 		width: 3px;
 		height: 30px;
-		background-color: var(--secondary-color);
-		transition: background-color .2s ease-in-out;
+		background-color: var(--primary-color);
+		transition: background-color 0.2s ease-in-out;
 	}
 
 	&:before {
@@ -57,7 +57,7 @@
 
 		&:before,
 		&:after {
-			background-color: var(--tertiary-color);
+			background-color: var(--forth-color);
 		}
 	}
 }

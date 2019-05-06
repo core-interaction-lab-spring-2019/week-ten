@@ -22,7 +22,7 @@ $(document).ready(function() {
 	});
 
 	$('.gallery').masonry({
-		itemSelector: '.gallery__item'
+		itemSelector: '.container'
 	});
 	
 	var $grid = $('.gallery').isotope({
@@ -31,6 +31,18 @@ $(document).ready(function() {
 		var filterValue = $(this).attr('data-filter');
 		$grid.isotope({ filter: filterValue });
 		$('.active').removeClass('active');
-		$(this).addClass('active');
-  	});
+		$(this).addClass('active');	
+	  });
+	  
+});
+
+
+var $thumbnail = $('.gallery__image');
+	window.addEventListener('keydown', function () {
+		$thumbnail.css('filter', 'invert(1)');
+});
+
+	window.addEventListener('keyup', function () {
+		$thumbnail.css('filter', 'invert(0)');
+
 });
